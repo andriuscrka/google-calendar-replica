@@ -95,17 +95,34 @@ input {
 	font-weight: 300;
 }
 
+.calendar-header--misc {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.calendar-header--misc > * {
+	margin-block: 5px;
+}
+
+.button-week--back,
+.button-week--forward {
+	font-size: 24px;
+	margin-inline: 7px;
+	cursor: pointer;
+}
+
 .calendar-header--timezone {
 	display: flex;
-	justify-content: flex-end;
-	align-items: flex-end;
+	align-self: flex-end;
 
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 10px;
 	color: rgb(70, 70, 70);
 
 	margin-bottom: 15px;
-	margin-right: 15px;
+	margin-right: 22px;
 }
 
 .calendar-header--cell {
@@ -192,6 +209,7 @@ input {
 	grid-template-rows: repeat(24, 60px);
 	grid-gap: 0px;
 
+	overflow: hidden;
 	position: relative;
 	z-index: 2;
 }
@@ -233,21 +251,35 @@ input {
 	color: rgb(62, 132, 236);
 	border: solid 1px rgb(62, 132, 236);
 
-	grid-row: 10/12;
-	grid-column: 4;
-
-	margin-bottom: 15px;
-
 	font-family: 'Lato', sans-serif;
 	font-size: 14px;
 
 	padding: 10px;
 
 	transition: 0.3s ease-in-out;
+	overflow-y: scroll;
+}
+
+.calendar-event::-webkit-scrollbar {
+	width: 7px;
+}
+
+.calendar-event::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+.calendar-event::-webkit-scrollbar-thumb {
+	border-radius: 100px;
+	background: rgb(0, 100, 255);
+}
+
+.calendar-event::-webkit-scrollbar-thumb:hover {
+	background: rgb(0, 81, 203);
 }
 
 .calendar-event:hover {
 	cursor: pointer;
+	z-index: 100;
 	background-color: rgb(225, 237, 255);
 }
 
