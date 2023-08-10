@@ -15,7 +15,7 @@
 
 	<body>
 		<header class="header"></header>
-		<form class="event-creation--modal">
+		<form class="event-creation--modal hide">
 			<div class="event-creation--modal--header">
 				<button class="modal-close--button" aria-label="Close modal button">
 					X
@@ -28,29 +28,57 @@
 						name="name"
 						aria-label="Add event title"
 						placeholder="Add title"
+						id="event-title"
+						class="mandatory-input"
+						value=""
 					/>
 				</div>
 				<div class="event-creation--modal--time">
 					<label for="starting-date" class="hide-visibility"
 						>Starting date</label
 					>
-					<input type="date" name="startingDate" id="starting-date" />
+					<input
+						type="date"
+						name="startingDate"
+						id="starting-date"
+						class="mandatory-input"
+						value=""
+					/>
 					<label for="starting-time" class="hide-visibility"
 						>Starting time</label
 					>
-					<input type="time" name="startingTime" id="starting-time" />
+					<input
+						type="time"
+						name="startingTime"
+						id="starting-time"
+						class="mandatory-input"
+						value=""
+					/>
 					<div aria-label="until">-</div>
 					<label for="finishing-time" class="hide-visibility"
 						>Finishing time</label
 					>
-					<input type="time" name="finishingTime" id="finishing-time" />
+					<input
+						type="time"
+						name="finishingTime"
+						id="finishing-time"
+						class="mandatory-input"
+						value=""
+					/>
 					<label for="finishing-date" class="hide-visibility"
 						>Finishing date</label
 					>
-					<input type="date" name="finishingDate" id="finishing-date" />
+					<input
+						type="date"
+						name="finishingDate"
+						id="finishing-date"
+						class="mandatory-input"
+						value=""
+					/>
 				</div>
 				<textarea
 					name="description"
+					id="event-description"
 					class="event-creation--modal--description"
 					placeholder="Description of the meeting"
 				></textarea>
@@ -62,7 +90,14 @@
 		<section class="content-wrap">
 			<aside class="aside-left"></aside>
 			<div aria-hidden="true" class="calendar-header">
-				<span class="calendar-header--timezone">GMT+03</span>
+				<div class="calendar-header--misc">
+					<div>
+						<button class="button-week--back"><</button>
+						<button class="button-week--forward">></button>
+					</div>
+					<span class="calendar-header--timezone">GMT+03</span>
+				</div>
+
 				<div class="calendar-header--cell">
 					<span class="calendar-header--cell--letters">SUN</span>
 					<span class="calendar-header--cell--number">9</span>
@@ -72,12 +107,8 @@
 					<span class="calendar-header--cell--number">10</span>
 				</div>
 				<div class="calendar-header--cell">
-					<span class="calendar-header--cell--letters current-day--letters"
-						>TUE</span
-					>
-					<span class="calendar-header--cell--number current-day--number"
-						>11</span
-					>
+					<span class="calendar-header--cell--letters">TUE</span>
+					<span class="calendar-header--cell--number">11</span>
 				</div>
 				<div class="calendar-header--cell">
 					<span class="calendar-header--cell--letters">WED</span>
@@ -123,16 +154,7 @@
 					<span class="time-marker">11 PM</span>
 				</div>
 				<div class="calendar-table--wrap">
-					<div class="calendar-table">
-						<div class="calendar-event">
-							<span class="calendar-event--title">Test Meeting,</span>
-							<span class="calendar-event--time">9:00 AM - 10:45 AM</span>
-							<p class="calendar-event--description">
-								This is a random description. Skill issue + ratio.
-							</p>
-						</div>
-					</div>
-
+					<div class="calendar-table"></div>
 					<div class="calendar-table--invisible">
 						<!------------------------------------->
 						<div class="calendar-table--cell"></div>
