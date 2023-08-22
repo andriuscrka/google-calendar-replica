@@ -1,0 +1,74 @@
+.headerCell {
+	display: flex;
+
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.headerCellLetters {
+	font-size: 12px;
+	font-weight: 400;
+	margin: 2px;
+}
+
+.headerCellNumbers {
+	width: 45px;
+	height: 45px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	text-align: center;
+	font-size: 26px;
+
+	border-radius: 50%;
+}
+
+.currentDayLetters {
+	color: rgb(0, 100, 255);
+}
+
+.headerCellNumbers:hover {
+	cursor: pointer;
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+.currentDayNumbers {
+	color: white;
+	background-color: rgb(0, 100, 255);
+}
+
+.currentDayNumbers:hover {
+	background-color: rgb(0, 81, 203);
+}
+
+.headerMisc {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.headerMisc > * {
+	margin-block: 5px;
+}
+
+.buttonWeek {
+	font-size: 24px;
+	margin-inline: 7px;
+	cursor: pointer;
+}
+
+.headerTimezone {
+	display: flex;
+	align-self: flex-end;
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: rgb(70, 70, 70);
+
+	margin-bottom: 15px;
+	margin-right: 22px;
+}
